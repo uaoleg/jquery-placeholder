@@ -140,6 +140,9 @@
 		var input = this;
 		var $input = $(input);
 		var id = this.id;
+		if ($input.is(':focus')) {
+			return;
+		}
 		if (input.value == '') {
 			if (input.type == 'password') {
 				if (!$input.data('placeholder-textinput')) {
